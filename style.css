@@ -1,0 +1,250 @@
+body {
+    background-color: #84B8FF;
+}
+
+a {
+    /*background-color: #FFCB84;*/
+    border: bisque;
+    border-width: 0.5cap;
+    border-style: solid;
+}
+.topnav a{
+    padding: 0px 24px;
+}
+
+.topnav a {
+    float: right;
+    color: #705b3c;
+    text-align: center;
+    border-radius: 20cap;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 999;
+    font-family: "Quicksand", serif;
+    margin-right: 2cap;
+    opacity: 1;
+    animation: fadeIn 1.8s;
+}
+
+
+.topnav a:hover {
+    color: black;
+    background-color: bisque;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; margin-top: 2.5cap;}
+    to { opacity: 1; margin-top: 0cap;}
+}
+
+.welcome {
+    font-family: "Quicksand", serif;
+    margin: auto;
+    place-content: center;
+    border-width: 0.5cap;
+    padding: 50px;
+    width: 65%;
+    height: 75%;
+    border-style: dotted;
+}
+
+.welcome p {
+    text-align: center;
+}
+
+.welcome h1 {
+    font-weight: 900;
+    text-align: center;
+    font-size: 5cap;
+    font-weight: 500;
+}
+
+.about {
+    font-family: "Quicksand", serif;
+    background-color: #FFCB84;
+    border: black;
+    border-style: dotted;
+    border-width: 0.5cap;
+    width: 20%;
+    height: 30%;
+    float: left;
+    margin-top: 175px;
+    margin-bottom: 175px;
+}
+
+.about h1 {
+    text-align: center;
+    padding: 70px;
+}
+
+.welcome p {
+    font-size: 2.2cap;
+}
+
+.aboutUs {
+    margin-top: 175px;
+    margin-bottom: 175px;
+    border: black dotted 0.5cap;
+    width: 78%;
+    height: 30%;
+    float: right;
+}
+
+.aboutUs p {
+    font-size: 2.7cap;
+    font-family: "Quicksand", serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.aboutTeam {
+    font-family: "Quicksand", serif;
+    background-color: #FFCB84;
+    border: black;
+    border-style: dotted;
+    border-width: 0.5cap;
+    width: 20%;
+    height: 45%;
+    float: right;
+}
+
+.aboutTeam h1 {
+    text-align: center;
+    padding: 70px;
+}
+
+.teamInfo {
+    display: flex;
+    margin-bottom: 175px;
+    border: rgb(255, 255, 255) dotted 0.5cap;
+    width: 78%;
+    height: 45%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamInfo p {
+    overflow: visible;
+    float: left;
+    font-size: 2.4cap;
+    font-family: "Quicksand", serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+.teamInfo img{
+    border: rgb(139, 96, 96) double 1.5cap;
+    border-radius: 50%;
+    height: 85%;
+    float: left;
+}
+
+.games {
+    display: flex;
+    border: rgb(255, 0, 0) dotted 0.5cap;
+    width: 100%;
+    justify-content: center;
+}
+
+.gamesLogo {
+    margin: auto;
+    display: flex;
+    border: rgb(255, 0, 0) dotted 0.5cap;
+    height: 15%;
+    width: 35%;
+    margin-top: 175px;
+    margin-bottom: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamesLogo h1 {
+    font-family: "Quicksand", serif;
+}
+
+.gamePic {
+    display: flex;
+    margin: auto;
+}
+
+.colorsofhope {
+    position: relative;
+    left: 60%;
+    right: 50%;
+    place-items: center;
+    place-content: center;
+    opacity: 1;
+    display: block;
+    border: rgb(255, 0, 0) dotted 0.5cap;
+    height: 250px;
+    width: 315px;
+}
+
+.colorsofhope:hover .gamePic {
+    transition: .5s ease;
+    opacity: 0.3;
+}
+
+.colorsofhope:hover .cohText {
+    opacity: 1;
+}
+
+.cohText {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    border: #705b3c dotted 0.5cap;
+    opacity: 0;
+    transition: .5s ease;
+} 
+
+.cohText p{
+    font-family: "Quicksand", serif;
+    font-size: 1.35 cap;
+    font-weight: 600;
+}
+
+.whiskerschoice p {
+    font-family: "Quicksand", serif;
+    font-size: 1.35 cap;
+    font-weight: 600;
+}
+
+.whiskerschoice {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    place-items: center;
+    place-content: center;
+    justify-content: center;
+    opacity: 1;
+    display: flex;
+    border: rgb(255, 0, 0) dotted 0.5cap;
+    height: 250px;
+    width: 315px;
+}
+
+.whiskerschoice:hover .gamePic {
+    transition: .5s ease;
+    opacity: 0.3;
+}
+
+.whiskerschoice:hover .wcText {
+    opacity: 1;
+}
+
+.wcText {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    border: #705b3c dotted 0.5cap;
+    opacity: 0;
+    transition: .5s ease;
+} 
