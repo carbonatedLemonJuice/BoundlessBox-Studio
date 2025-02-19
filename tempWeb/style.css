@@ -42,20 +42,27 @@ a.ele {
 /* Welcome Section */
 .welcome {
     font-family: "Quicksand", serif;
-    margin: 120px auto;
-    text-align: center;
+    margin: auto;
+    place-content: center;
     padding: 50px;
-    width: 80%;
+    width: 75%;
+    height: 65%;
     border-style: dotted;
 }
 
 .welcome h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 500;
 }
 
 .welcome p {
+    text-align: center;
     font-size: 1.5rem;
+}
+
+.welcomeText {
+    text-align: center;
+    vertical-align: middle;
 }
 
 /* About Section */
