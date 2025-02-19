@@ -16,8 +16,18 @@ a.ele {
     border-style: solid;
 }
 
+/* Top Navigation */
+.topnav {
+    background-color: #274D61;
+    height: 10%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
 .topnav a {
-    float: right;
     color: #705b3c;
     text-align: center;
     border-radius: 20cap;
@@ -25,9 +35,63 @@ a.ele {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 900;
-    margin-right: 2cap;
     opacity: 1;
     animation: fadeIn 1.8s;
+}
+
+.topnav a:hover {
+    color: black;
+    background-color: #0F969C;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 2rem;
+    color: #705b3c;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        right: 20px;
+        background-color: #274D61;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show navigation links when active */
+    }
+
+    .topnav a {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .topnav a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
 }
 
 .topnav a:hover {
@@ -66,6 +130,8 @@ a.ele {
 }
 
 /* About Section */
+
+
 .about, .aboutTeam {
     background-color: #0F969C;
     border: black dotted 0.5cap;
