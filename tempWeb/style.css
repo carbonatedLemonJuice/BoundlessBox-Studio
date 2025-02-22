@@ -110,8 +110,8 @@ a.ele {
     place-content: center;
     padding: 50px;
     width: 75%;
-    height: 65%;
-    border-style: dotted;
+    min-height: 85%;
+    border: black dotted 0.5cap;
 }
 
 .welcome h1 {
@@ -282,6 +282,14 @@ button {
 
     .contact-form h2 {
         font-size: 1.5rem;
+    }
+
+    input {
+        width: 85%;
+    }
+
+    textarea {
+        width: 85%;
     }
 }
 
