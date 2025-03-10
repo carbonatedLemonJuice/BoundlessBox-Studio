@@ -18,6 +18,7 @@ a.ele {
 
 /* Top Navigation */
 .topnav {
+    z-index: 999;
     background-color: #274D61;
     height: 10%;
     width: auto;
@@ -104,13 +105,17 @@ a.ele {
 }
 
 /* Welcome Section */
+.block {
+    height: 95%;
+}
+
 .welcome {
+    display: grid;
     font-family: "Quicksand", serif;
     margin: auto;
     place-content: center;
     padding: 50px;
     width: 75%;
-    min-height: 85%;
     border: black dotted 0.5cap;
 }
 
@@ -135,7 +140,7 @@ a.ele {
 .about, .aboutTeam {
     background-color: #0F969C;
     border: black dotted 0.5cap;
-    width: 90%;
+    width: 50%;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
@@ -174,7 +179,7 @@ a.ele {
 .gamesLogo {
     background-color: #0F969C;
     border: rgb(255, 0, 0) dotted 0.5cap;
-    width: 90%;
+    width: 60%;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
