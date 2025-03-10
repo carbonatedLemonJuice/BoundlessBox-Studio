@@ -1,37 +1,99 @@
+/* General Styles */
 html {
     scroll-behavior: smooth;
 }
 
 body {
     background-color: #6da5c0;
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", serif;
 }
 
 a.ele {
-    /*background-color: #FFCB84;*/
     border: #0F969C;
     border-width: 0.5cap;
     border-style: solid;
 }
 
-.topnav a{
-    padding: 0px 24px;
+/* Top Navigation */
+.topnav {
+    z-index: 999;
+    background-color: #274D61;
+    height: 10%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .topnav a {
-    float: right;
     color: #705b3c;
     text-align: center;
     border-radius: 20cap;
     padding: 14px 35px;
     text-decoration: none;
-    font-size: 25px;
-    font-weight: 999;
-    font-family: "Quicksand", serif;
-    margin-right: 2cap;
+    font-size: 1.5rem;
+    font-weight: 900;
     opacity: 1;
     animation: fadeIn 1.8s;
 }
 
+.topnav a:hover {
+    color: black;
+    background-color: #0F969C;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 2rem;
+    color: #705b3c;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        right: 20px;
+        background-color: #274D61;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show navigation links when active */
+    }
+
+    .topnav a {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .topnav a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
 
 .topnav a:hover {
     color: black;
@@ -42,304 +104,148 @@ a.ele {
     font-family: "Quicksand", serif;
 }
 
+/* Welcome Section */
+.block {
+    height: 95%;
+}
+
 .welcome {
+    display: grid;
     font-family: "Quicksand", serif;
     margin: auto;
     place-content: center;
-    border-width: 0.5cap;
     padding: 50px;
-    width: 65%;
-    height: 75%;
-    border-style: dotted;
-}
-
-.welcome p {
-    text-align: center;
+    width: 75%;
+    border: black dotted 0.5cap;
 }
 
 .welcome h1 {
-    font-weight: 900;
-    text-align: center;
-    font-size: 5cap;
+    font-size: 4rem;
     font-weight: 500;
-}
-
-.about {
-    font-family: "Quicksand", serif;
-    background-color: #0F969C;
-    border: black;
-    border-style: dotted;
-    border-width: 0.5cap;
-    width: 20%;
-    height: 30%;
-    float: left;
-    margin-top: 175px;
-    margin-bottom: 175px;
-}
-
-.about h1 {
-    text-align: center;
-    padding: 70px;
 }
 
 .welcome p {
-    font-size: 2.5vw;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
-.aboutUs {
-    margin-top: 175px;
-    margin-bottom: 175px;
+.welcomeText {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* About Section */
+
+
+.about, .aboutTeam {
+    background-color: #0F969C;
+    border: black dotted 0.5cap;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.aboutUs, .teamInfo {
     background-color: #274D61;
     border: black dotted 0.5cap;
-    width: 78%;
-    height: 30%;
-    float: right;
-}
-
-.aboutUs p {
-    font-size: 2.7cap;
-    font-family: "Quicksand", serif;
-    font-weight: 500;
-    line-height: 1.5;
-}
-
-.aboutTeam {
-    font-family: "Quicksand", serif;
-    background-color: #0F969C;
-    border: black;
-    border-style: dotted;
-    border-width: 0.5cap;
-    width: 20%;
-    height: 45%;
-    float: right;
-}
-
-.aboutTeam h1 {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
     text-align: center;
-    padding: 70px;
+    font-size: 1.5rem;
 }
 
 .teamInfo {
     display: flex;
-    margin-bottom: 175px;
-    border: rgb(255, 255, 255) dotted 0.5cap;
-    background-color: #274D61;
-    width: 78%;
-    height: 45%;
-    float: left;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+.teamInfo img {
+    border: rgb(139, 96, 96) double 1.5cap;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
 }
 
 .teamInfo p {
-    overflow: visible;
-    float: left;
-    font-size: 2.4cap;
-    font-family: "Quicksand", serif;
-    font-weight: 500;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
-
-.teamInfo img{
-    border: rgb(139, 96, 96) double 1.5cap;
-    border-radius: 50%;
-    height: 85%;
-    float: left;
+/* Games Section */
+.gamesLogo {
+    background-color: #0F969C;
+    border: rgb(255, 0, 0) dotted 0.5cap;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .games {
-    padding-top: 30px;
     display: flex;
-    border: rgb(255, 0, 0) dotted 0.5cap;
-    background-color: #274D61;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50%;
-    justify-content: center;
-    position: relative;
-}
-
-.itch {
-    font-family: "Quicksand", serif;
-    font-size: 2.5cap;
-    font-weight: 500;
-    position: absolute;
-    bottom: 0;
-    color: wheat;
-}
-
-.itch h3 {
-    color: wheat;
-}
-
-.itch h3:hover {
-    color: rgb(143, 118, 72);
-}
-
-.gamesLogo {
-    margin: auto;
-    display: flex;
-    border: rgb(255, 0, 0) dotted 0.5cap;
-    background-color: #0F969C;
-    height: 15%;
-    width: 35%;
-    margin-top: 175px;
-    margin-bottom: 45px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
-
-.gamesLogo h1 {
-    font-family: "Quicksand", serif;
+    background-color: #274D61;
+    border: rgb(255, 0, 0) dotted 0.5cap;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .gamePic {
-    display: flex;
-    margin: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-.colorsofhope {
+.colorsofhope, .whiskerschoice {
     position: relative;
-    left: 0;
-    place-items: center;
-    place-content: center;
-    opacity: 1;
-    display: block;
-    border: rgb(255, 0, 0) dotted 0.5cap;
-    height: 250px;
-    width: 315px;
-}
-
-.colorsofhope:hover .gamePic {
-    transition: .5s ease;
-    opacity: 0.3;
-}
-
-.colorsofhope:hover .cohText {
-    opacity: 1;
-}
-
-.cohText {
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    border: #705b3c dotted 0.5cap;
-    opacity: 0;
-    transition: .5s ease;
-} 
-
-.cohText p{
-    font-family: "Quicksand", serif;
-    font-size: 1.35 cap;
-    font-weight: 600;
-}
-
-.whiskerschoice p {
-    font-family: "Quicksand", serif;
-    font-size: 1.35 cap;
-    font-weight: 600;
-}
-
-.whiskerschoice {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    place-items: center;
-    place-content: center;
-    justify-content: center;
-    opacity: 1;
-    display: flex;
-    border: rgb(255, 0, 0) dotted 0.5cap;
-    height: 250px;
-    width: 315px;
-}
-
-.whiskerschoice:hover .gamePic {
-    transition: .5s ease;
-    opacity: 0.3;
-}
-
-.whiskerschoice:hover .wcText {
-    opacity: 1;
-}
-
-.wcText {
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    border: #705b3c dotted 0.5cap;
-    opacity: 0;
-    transition: .5s ease;
-}
-
-.contact {
-    font-family: "Quicksand", serif;
-    position: absolute;
-    top: 100px;
-    min-height: 100vh;
-    padding: 50px;
+    margin: 20px 0;
     text-align: center;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
 }
 
+.cohText, .wcText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.colorsofhope:hover .cohText, .whiskerschoice:hover .wcText {
+    opacity: 1;
+}
+
+/* Contact Section */
 .containe {
-    font-family: "Quicksand", serif;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 75px;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border: 0.25cap dotted black;
-    margin: 0 auto;
-    height: 75%;
-    box-sizing: border-box;
     background-color: #0F969C;
-}
-
-#contactt {
-    margin-top: 100px;
-}
-
-.conus {
-    margin-right: auto;
-    margin-left: auto;
-    position: absolute;
+    border: 0.25cap dotted black;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .contact-wrapper {
     display: flex;
-    margin: 150px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 230px;
 }
 
 .contact-form {
-    text-align: left;
-}
-
-.contact-form h2 {
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .form-group {
     margin-bottom: 20px;
 }
 
-input {
-    font-family: "Quicksand", serif;
+input, textarea {
     width: 100%;
     padding: 12px;
     border-radius: 8px;
@@ -349,21 +255,74 @@ input {
 
 button {
     background-color: aliceblue;
-    font-family: "Quicksand", serif;
-    font-size: 15px;
+    font-size: 1rem;
+    padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    /* scale: 125%; */
+    cursor: pointer;
 }
 
-textarea {
-    font-family: "Quicksand", serif;
-    width: 100%;
-    resize: vertical;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    background-color: aliceblue;
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .topnav a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .welcome h1 {
+        font-size: 2rem;
+    }
+
+    .welcome p {
+        font-size: 1.2rem;
+    }
+
+    .teamInfo p .aboutUs p {
+        font-size: 1rem;
+    }
+
+    .gamesLogo h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: 85%;
+    }
+
+    textarea {
+        width: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .topnav a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .welcome h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome p {
+        font-size: 1rem;
+    }
+
+    /* .teamInfo p {
+        font-size: 0.9rem;
+    } */
+
+    .gamesLogo h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.2rem;
+    }
 }
 
 .links {

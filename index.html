@@ -1,40 +1,39 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-        <title>BoundlessBox Studio</title>
-    </head>
-    <body>
-
-        <map name="colorsOfHope">
-            <area shape="default" href="https://carbonatedlemonjuice.itch.io/colors-of-hope" alt="https://carbonatedlemonjuice.itch.io/">
-        </map>
-        <map name="wcMap">
-            <area shape="default" href="https://carbonatedlemonjuice.itch.io/whiskers-choice" alt="https://carbonatedlemonjuice.itch.io/">
-        </map>
-
-        <div class="topnav">
-            <a class="ele" class="ele" href="#contactt">Contact</a>
-            <a class="ele" href="#games">Games</a>
-            <a class="ele" href="#about">About</a>
-            <a class="ele" href="#home">Home</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>BoundlessBox Studio</title>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="topnav">
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="bi bi-list"></i> <!-- Hamburger icon -->
         </div>
+        <div class="nav-links" id="navLinks">
+            <a class="ele" href="#home">Home</a>
+            <a class="ele" href="#about">About</a>
+            <a class="ele" href="#games">Games</a>
+            <a class="ele" href="#contactt">Contact</a>
+        </div>
+    </div>
 
         <div class="welcome block">
-            <h1>BoundlessBox Studio</h1>
-            <p>imagination is the limit</p>
+            <h1 class="welcomeText">BoundlessBox Studio</h1>
+            <p class="welcomeText">imagination is the limit</p>
         </div>
         
-        <div class="about blockL" id="about">
+        <div class="about blockL">
             <h1>ABOUT US</h1>
         </div>
 
-        <div class="aboutUs blockL">
+        <div id="about" class="aboutUs blockL">
             <p>At BoundlessBox Studio, we're all about moulding and breaking the limits of one's imagination.
                 As a passionate game development studio, we dedicate our heart to craft unforgettable 
                 experiences that captures the golden era of gaming, where fun and creativity have no bounds. 
@@ -45,29 +44,37 @@
             <h1>ABOUT TEAM</h1>
         </div>
 
-        <div class="teamInfo blockL">
-                <img src="assets/images/pic2.png" alt="image not supported" class="profilePic">
+        <div class="teamInfo blockR">
+            <img src="assets/pic/pic2.png" alt="image not supported" class="profilePic">
             <p>Amit Kharb, known online as *carbontedLemonJuice*, 
-                is the sole developer behind BoundlessBox Studio. 
+                is the Founder of BoundlessBox Studio. He is programmer, director, and designer of the studio. 
                 With a deep passion for computers and video games from a young age, 
                 Amit is dedicated to creating games that are both enjoyable and memorable. 
                 Having participated in numerous game jams, both solo and as part of teams, 
                 he has gained valuable experience in game development. 
-                Currently, Amit is working on two exciting projects under the BoundlessBox Studio brand. 
+                Currently, Amit is directing <a href="mitd.html" target="_blank">Monsters in the Dark</a> game.
+            </p>
+        </div>
+        <div class="teamInfo blockL">
+            <img src="assets/pic/adityaPic.jpg" alt="image not supported" class="profilePic">
+            <p>Aditya Shukla, known online as “…….” , oh wait the guy has no online presence, 
+                is an aspiring game designer. Ever since Aditya was a child, he was infatuated 
+                with video games and wanted to explore more about the world of games. This passion 
+                of games led him to the amazing world of game design. Though having limited experience, 
+                Aditya is determined to change the Indian Gaming Industry for good; with an aim to transform the 
+                industry it into the most interesting, diverse and fun industry in the entire cosmos. Currently 
+                Aditya is collaborating with Amit  in the upcoming title- “Monsters in the Dark” 
             </p>
         </div>
         <div class="teamInfo blockR">
-            <img src="assets/images/pic2.png" alt="image not supported" class="profilePic">
-            <p>Amit Kharb, known online as *carbontedLemonJuice*, 
-            is the sole developer behind BoundlessBox Studio. 
-            With a deep passion for computers and video games from a young age, 
-            Amit is dedicated to creating games that are both enjoyable and memorable. 
-            Having participated in numerous game jams, both solo and as part of teams, 
-            he has gained valuable experience in game development. 
-            Currently, Amit is working on two exciting projects under the BoundlessBox Studio brand. 
+            <img src="assets/pic/abheeshtPic.jpg" alt="image not supported" class="profilePic">
+            <p>Abheesht Kodati is a name that stands on its own, needing no alias to make an impact. 
+                From an early age, he was drawn to video games—not just for the thrill but for the deep, 
+                immersive stories they told. To him, games were more than entertainment; 
+                they were new realities to explore. It wasn’t just about playing but experiencing and living the narratives. 
+                In these worlds, his name found its place, resonating with the essence of storytelling and adventure. 
             </p>
         </div>
-        
 
         <div id="games" class="gamesLogo blockL">
             <h1>OUR GAMES/PROJECTS</h1>
@@ -76,7 +83,7 @@
         <div class="games blockL">
             <a href="https://carbonatedlemonjuice.itch.io/colors-of-hope" target="_blank">
                 <div class="colorsofhope">
-                    <img src="assets/images/colorsofHope_cover.png" alt="colorsofhope" class="gamePic">
+                    <img src="colorsofHope_cover.png" alt="colorsofhope" class="gamePic">
                     <div class="cohText">
                         <p>first project ever made, game about hope and colors</p>
                     </div>
@@ -84,7 +91,7 @@
             </a>
             <a href="https://carbonatedlemonjuice.itch.io/whiskers-choice" target="_blank">
                 <div class="whiskerschoice">
-                    <img src="assets/images/whiskersChoice_pic.png" alt="whiskerschoice" class="gamePic">
+                    <img src="whiskersChoice_pic.png" alt="whiskerschoice" class="gamePic">
                     <div class="wcText">
                         <p>choice based game made in black cat jam 2024</p>
                     </div>
@@ -119,5 +126,11 @@
                 </div>
             </div>
         </div>
+        <script>
+            function toggleMenu() {
+                const navLinks = document.getElementById("navLinks");
+                navLinks.classList.toggle("active");
+            }
+        </script>
     </body>
 </html>
