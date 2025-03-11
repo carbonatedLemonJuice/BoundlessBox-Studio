@@ -110,12 +110,14 @@ a.ele {
 }
 
 .welcome {
-    display: grid;
     font-family: "Quicksand", serif;
     margin: auto;
     place-content: center;
     padding: 50px;
-    width: 75%;
+    width: 85%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
     border: black dotted 0.5cap;
 }
 
