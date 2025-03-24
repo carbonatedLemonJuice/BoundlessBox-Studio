@@ -121,6 +121,12 @@ a.ele {
     border: black dotted 0.5cap;
 }
 
+.rectLong .rectShort {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
 .welcome h1 {
     font-size: 4rem;
     font-weight: 500;
@@ -168,7 +174,7 @@ a.ele {
     border: rgb(139, 96, 96) double 1.5cap;
     border-radius: 50%;
     width: 150px;
-    height: 150px;
+    height: auto;
     margin-bottom: 20px;
 }
 
