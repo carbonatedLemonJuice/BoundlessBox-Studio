@@ -1,8 +1,78 @@
-body {
-    background-image: url(assets/pic/mitdBG.jpg);
+* {
+    color: white;   
 }
 
-@font-face {
-    font-family: "";
-    src: url();
+body {
+    position: relative;
+    height: 100hv;
+    background-color: black;
+}
+
+.intro {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Lacquer", system-ui;
+}
+
+.intro h1 {
+    font-size: 60px;
+}
+
+.intro p {
+    font-size: 40px;
+}
+
+.blob-outer-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    inset: 0;
+    margin: auto;
+    filter: blur(100px);
+}
+
+.blob-inner-container {
+    border-radius: 99999px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1000px;
+    overflow: hidden;
+    background-color: wheat;
+    transform: scale(0.6);
+}
+
+.blob {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    margin: auto;
+    background: conic-gradient(from 0deg, #525252, #414141, #313131, #CA3E47);
+    animation: blobSpin 9s linear infinite;
+}
+
+i {
+    font-size: 45px;
+    color: #5865f2;
+}
+
+@keyframes blobSpin {
+
+    0% {
+        transform: rotate(0deg) scale(2);
+    }
+
+    100% {
+        transform: rotate(1turn) scale(2);
+    }
+    
 }
